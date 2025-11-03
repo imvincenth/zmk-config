@@ -75,10 +75,19 @@
         Sym {
             display-name = "Sym";
             bindings = <
-                &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
-                &trans    &trans  &trans    &trans      &trans         &trans     &trans         &trans           &trans   &trans
-&studio_unlock  &trans    &trans  &trans    &trans      &trans         &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
-                                  &trans    &trans      &trans         &trans     &trans         &trans
+        &kp SINGLE_QUOTE  &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp PERIOD    &kp AMPERSAND  &kp DOLLAR     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT
+        &kp EXCLAMATION   &kp MINUS      &kp PLUS          &kp KP_EQUAL       &kp HASH      &kp PIPE       &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION
+&trans  &kp CARET         &kp SLASH      &kp STAR          &kp BACKSLASH      &trans        &kp TILDE      &kp SEMICOLON  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &kp HOME
+                                         &trans            &trans             &trans        &trans         &trans         &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };

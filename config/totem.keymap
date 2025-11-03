@@ -62,7 +62,7 @@
             >;
         };
 
-        Nav {
+        Num {
             display-name = "Nav";
             bindings = <
               &kp TILDE       &trans     &kp UP_ARROW  &trans     &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0

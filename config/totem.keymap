@@ -1,0 +1,85 @@
+//
+//                                                        ▀▀▀▀▀     ▀▀▀▀▀          ▀▀█▀▀
+//                                                        ▄▀▀▀▄  ▄  ▄▀▀▀▄  ▄  ▄▀▀▀▄  █  ▄▀▀▀▄
+//                                                        █   █  █  █   █  █  █   █  █  █   █
+//                                                         ▀▀▀   █   ▀▀▀   █   ▀▀▀   ▀   ▀▀▀
+//                                                               █      ▄▄▄█▄▄▄    █   █  
+//                                                               ▀      █  █  █     █▄█
+//                                                             ▀▀▀▀▀    █  █  █      ▀
+//                                                                      ▀  ▀  ▀
+//
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+#define Base        0
+#define Nav         1
+#define Sym         2
+#define Fun         3
+#define Game        4
+#define Gameplus    5
+
+&mt {
+    quick-tap-ms = <100>;
+    global-quick-tap;
+    flavor = "tap-preferred";
+    tapping-term-ms = <170>;
+};
+
+&lt {
+    tapping-term-ms = <240>;
+    flavor = "balanced";
+    quick-tap-ms = <150>;
+};
+
+/ {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
+    combos { compatible = "zmk,combos"; };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        Base {
+            display-name = "Base";
+            bindings = <
+         &kp V       &kp L       &kp E        &kp G         &kp K        &kp Q    &kp F          &kp O        &kp U          &kp J
+         &hm LGUI S  &hm LALT R  &hm LCTRL N  &hm LSHIFT T  &kp B        &kp Y    &hm RSHFT C    &hm RCTRL A  &hm RALT E     &hm RGUI I
+&kp ESC  &kp Z       &kp X       &kp M        &kp D         &kp P        &kp SQT  &kp W          &kp PERIOD   &kp SEMICOLON  &kp COMMA   &kp SLASH
+                                 &sl 1        &kp SPACE     &kp SPACE    &kp RET  &kp BACKSPACE  &sl 2
+            >;
+        };
+
+        Num {
+            display-name = "Nav";
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+        &trans  &trans  &trans  &trans  &trans    &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp LS(EQUAL)
+                        &trans  &trans  &trans    &trans  &trans        &kp DOT
+            >;
+        };
+
+        Sym {
+            display-name = "Sym";
+            bindings = <
+                &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
+                &trans    &trans  &trans    &trans      &trans         &trans     &trans         &trans           &trans   &trans
+&studio_unlock  &trans    &trans  &trans    &trans      &trans         &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
+                                  &trans    &trans      &trans         &trans     &trans         &trans
+            >;
+        };
+    };
+};

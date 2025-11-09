@@ -55,7 +55,7 @@
         Base {
             display-name = "Base";
             bindings = <
-         &kp V       &kp L       &kp E        &kp G         &kp K    &kp Q    &kp F          &kp O        &kp U          &kp J
+         &kp V       &kp L       &kp H        &kp G         &kp K    &kp Q    &kp F          &kp O        &kp U          &kp J
          &hm LGUI S  &hm LALT R  &hm LCTRL N  &hm LSHIFT T  &kp B    &kp Y    &hm RSHFT C    &hm RCTRL A  &hm RALT E     &hm RGUI I
 &kp ESC  &kp Z       &kp X       &kp M        &kp D         &kp P    &kp SQT  &kp W          &kp PERIOD   &kp SEMICOLON  &kp COMMA   &kp SLASH
                                  &sl 1        &kp SPACE     &sl 3    &kp RET  &kp BACKSPACE  &sl 2

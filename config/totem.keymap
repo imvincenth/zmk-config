@@ -55,10 +55,10 @@
         Base {
             display-name = "Base";
             bindings = <
-         &kp V       &kp L       &kp E        &kp G         &kp K        &kp Q    &kp F          &kp O        &kp U          &kp J
-         &hm LGUI S  &hm LALT R  &hm LCTRL N  &hm LSHIFT T  &kp B        &kp Y    &hm RSHFT C    &hm RCTRL A  &hm RALT E     &hm RGUI I
-&kp ESC  &kp Z       &kp X       &kp M        &kp D         &kp P        &kp SQT  &kp W          &kp PERIOD   &kp SEMICOLON  &kp COMMA   &kp SLASH
-                                 &sl 1        &kp SPACE     &kp SPACE    &kp RET  &kp BACKSPACE  &sl 2
+         &kp V       &kp L       &kp E        &kp G         &kp K    &kp Q    &kp F          &kp O        &kp U          &kp J
+         &hm LGUI S  &hm LALT R  &hm LCTRL N  &hm LSHIFT T  &kp B    &kp Y    &hm RSHFT C    &hm RCTRL A  &hm RALT E     &hm RGUI I
+&kp ESC  &kp Z       &kp X       &kp M        &kp D         &kp P    &kp SQT  &kp W          &kp PERIOD   &kp SEMICOLON  &kp COMMA   &kp SLASH
+                                 &sl 1        &kp SPACE     &sl 3    &kp RET  &kp BACKSPACE  &sl 2
             >;
         };
 
@@ -82,12 +82,12 @@
             >;
         };
 
-        layer_3 {
+        Nav {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+        &trans        &trans        &trans     &trans          &trans    &kp PAGE_UP    &kp HOME  &kp UP    &kp END    &kp CAPSLOCK
+        &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans    &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&trans  &trans        &trans        &trans     &trans          &trans    &trans         &trans    &trans    &trans     &trans        &trans
+                                    &trans     &trans          &trans    &trans         &trans    &trans
             >;
         };
     };
